@@ -64,8 +64,22 @@ public class FilaEstatica {
         return dados[indiceUltimo];
     }
 
-        public int UltimoF(){
-            return dados[fim];
+
+    public boolean buscar(int valor) {
+
+
+        for (int i = 0; i < tamanho; i++) {
+
+            int indice = (inicio + i) % dados.length;
+
+
+            if (dados[indice] == valor) {
+                return true;
+            }
         }
+        return false;
+    }
+
+
 
 }
