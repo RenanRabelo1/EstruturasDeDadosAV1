@@ -1,4 +1,4 @@
-public class ListaDuplamenteEncadeadaNaoOrdenada {
+public class ListaDuplamenteEncadeadaOrdenada {
 
     private static class No {
         int valor;
@@ -7,49 +7,57 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
 
         public No(int valor) {
             this.valor = valor;
-            this.anterior = null;
-            this.proximo = null;
         }
     }
 
     private No inicio;
     private No fim;
     private int tamanho;
-    private int capacidade; 
 
-    public ListaDuplamenteEncadeadaNaoOrdenada(int capacidade) {
-        this.inicio = null;
-        this.fim = null;
-        this.tamanho = 0;
-        this.capacidade = capacidade;
-    }
-
-    // Inserção (no final)
-    public boolean inserir(int valor) {
-
-        if (estaCheia()) {
-            System.out.println("Lista cheia!");
-            return false;
-        }
+    // Inserção ORDENADA
+    public void inserir(int valor) {
 
         No novo = new No(valor);
 
-        if (estaVazia()) {
+        // Lista vazia
+        if (inicio == null) {
             inicio = fim = novo;
-        } else {
+        }
+        // Inserir no início
+        else if (valor <= inicio.valor) {
+            novo.proximo = inicio;
+            inicio.anterior = novo;
+            inicio = novo;
+        }
+        // Inserir no final
+        else if (valor >= fim.valor) {
             fim.proximo = novo;
             novo.anterior = fim;
             fim = novo;
         }
+        // Inserir no meio
+        else {
+            No atual = inicio;
+
+            while (atual != null && atual.valor < valor) {
+                atual = atual.proximo;
+            }
+
+            // inserir antes do "atual"
+            novo.proximo = atual;
+            novo.anterior = atual.anterior;
+
+            atual.anterior.proximo = novo;
+            atual.anterior = novo;
+        }
 
         tamanho++;
-        return true;
     }
 
     // Remoção
     public boolean remover(int valor) {
 
-        if (estaVazia()) {
+        if (inicio == null) {
             System.out.println("Lista vazia!");
             return false;
         }
@@ -60,25 +68,24 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
             atual = atual.proximo;
         }
 
-        if (atual == null) {
+        if (atual == null)
             return false;
-        }
 
-        // Removendo o único elemento
+        // único elemento
         if (inicio == fim) {
             inicio = fim = null;
         }
-        // Removendo o primeiro
+        // primeiro
         else if (atual == inicio) {
             inicio = atual.proximo;
             inicio.anterior = null;
         }
-        // Removendo o último
+        // último
         else if (atual == fim) {
             fim = atual.anterior;
             fim.proximo = null;
         }
-        // Removendo do meio
+        // meio
         else {
             atual.anterior.proximo = atual.proximo;
             atual.proximo.anterior = atual.anterior;
@@ -93,11 +100,13 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
 
         No atual = inicio;
 
-        while (atual != null) {
+        while (atual != null && atual.valor <= valor) {
+
             if (atual.valor == valor) {
                 System.out.println("Valor " + valor + " encontrado");
                 return true;
             }
+
             atual = atual.proximo;
         }
 
@@ -105,17 +114,12 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
         return false;
     }
 
-    // Verificar vazia
+    // Verifica vazia
     public boolean estaVazia() {
         return tamanho == 0;
     }
 
-    // Verificar cheia
-    public boolean estaCheia() {
-        return tamanho == capacidade;
-    }
-
-    // Impressão (início -> fim)
+    // Impressão
     public void imprimir() {
 
         No atual = inicio;
@@ -128,7 +132,7 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
         System.out.println("null");
     }
 
-    // Impressão reversa (extra)
+    // Impressão reversa
     public void imprimirReverso() {
 
         No atual = fim;
@@ -141,7 +145,7 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
         System.out.println("null");
     }
 
-    // Liberação de memória
+    // Liberar memória
     public void liberar() {
 
         No atual = inicio;
@@ -154,8 +158,7 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
             temp.proximo = null;
         }
 
-        inicio = null;
-        fim = null;
+        inicio = fim = null;
         tamanho = 0;
 
         System.out.println("Lista liberada!");
@@ -163,30 +166,26 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
 
     public static void main(String[] args) {
 
-        ListaDuplamenteEncadeadaNaoOrdenada lista = new ListaDuplamenteEncadeadaNaoOrdenada(5);
+        ListaDuplamenteEncadeadaOrdenada lista = new ListaDuplamenteEncadeadaOrdenada();
 
-        lista.inserir(10);
-        lista.inserir(20);
         lista.inserir(30);
+        lista.inserir(10);
+        lista.inserir(50);
+        lista.inserir(20);
 
-        System.out.print("Lista: ");
+        System.out.print("Lista ordenada: ");
         lista.imprimir();
 
-        lista.remover(20);
+        lista.remover(30);
 
-        System.out.print("Após remover 20: ");
+        System.out.print("Após remover 30: ");
         lista.imprimir();
 
-        lista.buscar(10);
-        lista.buscar(50);
-
-        System.out.println("Está vazia? " + lista.estaVazia());
-        System.out.println("Está cheia? " + lista.estaCheia());
+        lista.buscar(20);
+        lista.buscar(70);
 
         lista.imprimirReverso();
 
         lista.liberar();
-
-        System.out.println("Está vazia após liberar? " + lista.estaVazia());
     }
 }
