@@ -3,11 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-<<<<<<< HEAD
-      <sourceFolder url="file://$MODULE_DIR$/ListaEstatica" isTestSource="false" />
-=======
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
->>>>>>> 5d9f72791730245c9efbcce9b8e2f223a51c6c83
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
