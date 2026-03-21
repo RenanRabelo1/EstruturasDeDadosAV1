@@ -1,3 +1,4 @@
+// Caique
 public class ListaEstatica {
     private int[] dados;
     private int tamanho;
@@ -8,6 +9,7 @@ public class ListaEstatica {
         tamanho = 0;
     }
 
+    // Inserir valores na Lista
     public boolean inserir(int valor){
         if (tamanho == dados.length){
             System.out.println("LISTA CHEIA");
@@ -19,6 +21,7 @@ public class ListaEstatica {
         }
     }
 
+    // Remover valores da lista
     public boolean remover(int valor){
         if (tamanho == 0){
             System.out.println("Não há nada a remover");
@@ -37,6 +40,7 @@ public class ListaEstatica {
         return false;
     }
 
+    // Buscar valores na lista
     public boolean buscar(int valor){
         for (int i = 0; i<tamanho; i++) {
             if (valor == dados[i]){
@@ -49,10 +53,12 @@ public class ListaEstatica {
         return false;
     }
 
+    // Retornar o tamanho da lista
     public int tamanho(){
         return tamanho;
     }
 
+    // Imprimir a lista
     public void imprimir(){
         for (int i = 0; i < tamanho; i++) {
             System.out.println(dados[i] + " ");
@@ -60,16 +66,18 @@ public class ListaEstatica {
         System.out.println();
     }
 
+    // Verificar se a lista está vazia
     public boolean isEmpty(){
         if (tamanho == 0){
             System.out.println("A lista está vazia");
             return true;
         }
-
+        
         System.out.println("A lista não está vazia");
         return false;
     }
-
+    
+    // Verificar se a lista está cheia
     public boolean isFull(){
         if (tamanho == dados.length){
             System.out.println("A lista está cheia");
@@ -80,29 +88,69 @@ public class ListaEstatica {
         return false;
     }
 
+    // Esvaziar a lista
     public void esvaziar(){
         tamanho = 0;
     }
+
+    // Inverter a lista
+    public void inverter(){
+        int aux;
+        for (int i = 0; i < tamanho/2; i++) {
+            aux = dados[i];
+            dados[i] = dados[tamanho - 1 - i];
+            dados[tamanho - 1 - i] = aux;
+        }
+    }
+
+    // Rertornar a soma dos números da lista
+    public float somar(){
+        float soma = 0;
+        for (int i = 0; i < tamanho; i++) {
+            soma += dados[i];
+        }
+        return soma;
+    }
+
     public static void main(String[] args) {
         ListaEstatica l = new ListaEstatica(5);
         l.inserir(10);
         l.inserir(20);
         l.inserir(30);
         l.inserir(40);
+
         l.imprimir();
+
         System.out.println("Tamanho da lista: " + l.tamanho());
+
         l.remover(20);
+
         l.imprimir();
+
+        // Buscar numeros na lista
         l.buscar(10);
         l.buscar(70);
-        l.isEmpty();
-//        l.remover(10);
-//        l.remover(30);
-//        l.remover(40);
+
         l.isEmpty();
         l.isFull();
+        
         l.imprimir();
+
+        // Contar elementos
+        System.out.println("Tamanho da lista: " + l.tamanho());
+
+        // Inverter lista
+        l.inverter();
+
+        l.imprimir();
+
+        // Retornar soma
+        System.out.println("Soma dos elementos da lista: " + l.somar());
+
+        // Liberar memória
         l.esvaziar();
+
+        System.out.println("A lista está vazia após liberar espaço? " + l.isEmpty() );
+
     }
 }
-

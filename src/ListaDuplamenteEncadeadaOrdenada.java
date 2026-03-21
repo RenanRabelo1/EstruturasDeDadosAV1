@@ -164,6 +164,20 @@ public class ListaDuplamenteEncadeadaOrdenada {
         System.out.println("Lista liberada!");
     }
 
+    // Soma dos elementos da lista
+    public int somar() {
+
+        int soma = 0;
+        No atual = inicio;
+
+        while (atual != null) {
+            soma += atual.valor;
+            atual = atual.proximo;
+        }
+
+        return soma;
+    }   
+
     public static void main(String[] args) {
 
         ListaDuplamenteEncadeadaOrdenada lista = new ListaDuplamenteEncadeadaOrdenada();
@@ -181,11 +195,16 @@ public class ListaDuplamenteEncadeadaOrdenada {
         System.out.print("Após remover 30: ");
         lista.imprimir();
 
+        // Buscar elementos na lista
         lista.buscar(20);
         lista.buscar(70);
 
+        // SOma dos elementos
+        System.out.println("Soma dos elementos: " + lista.somar());
+        // Invers da lista
         lista.imprimirReverso();
 
+        // Liberar memória
         lista.liberar();
     }
 }

@@ -161,6 +161,20 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
         System.out.println("Lista liberada!");
     }
 
+    // Soma dos elementos da lista
+    public int somar() {
+
+        int soma = 0;
+        No atual = inicio;
+
+        while (atual != null) {
+            soma += atual.valor;
+            atual = atual.proximo;
+        }
+
+        return soma;
+    }
+
     public static void main(String[] args) {
 
         ListaDuplamenteEncadeadaNaoOrdenada lista = new ListaDuplamenteEncadeadaNaoOrdenada(5);
@@ -177,16 +191,25 @@ public class ListaDuplamenteEncadeadaNaoOrdenada {
         System.out.print("Após remover 20: ");
         lista.imprimir();
 
+        // Buscar valores
         lista.buscar(10);
         lista.buscar(50);
 
+        // Verificação se a lista está vazia ou cheia
         System.out.println("Está vazia? " + lista.estaVazia());
         System.out.println("Está cheia? " + lista.estaCheia());
 
+        // Soma dos elementos da lista
+        System.out.println("Soma dos números da lista: " + lista.somar());
+
+        // Lista reversa
         lista.imprimirReverso();
 
+        // Esvaziar lista
         lista.liberar();
 
         System.out.println("Está vazia após liberar? " + lista.estaVazia());
+
+
     }
 }
