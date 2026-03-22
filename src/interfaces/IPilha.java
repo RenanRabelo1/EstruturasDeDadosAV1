@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface IPilha<T> {//Não entendi pq a interface é feita aqui. Ele não precisa ser só na classe?
+public interface IPilha<T> {
     void push(T elemento);
     T pop();
     T peek();
