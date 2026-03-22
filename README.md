@@ -76,7 +76,6 @@ Após compilar, execute as classes utilizando o caminho completo do pacote.
 1. Testar estruturas individualmente
 Cada classe possui um método main que demonstra suas operações. Exemplos:
 
-bash
 # Lista estática
 java -cp out estruturas.lista.ListaEstatica
 
