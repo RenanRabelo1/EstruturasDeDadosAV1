@@ -10,12 +10,14 @@ public class ListaSimplesmenteEncadeadaOrdenada {
 
     public void insercao(int conteudo) {
         No novo = new No(conteudo);
+
         if (this.inicio != null && conteudo >= this.inicio.conteudo) {
             No atual;
             for(atual = this.inicio; atual.proximo != null && atual.proximo.conteudo < conteudo; atual = atual.proximo) {
             }
 
             novo.proximo = atual.proximo;
+
             atual.proximo = novo;
         } else {
             novo.proximo = this.inicio;

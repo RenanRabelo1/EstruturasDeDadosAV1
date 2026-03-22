@@ -1,20 +1,24 @@
 public class FilaDinamica {
 
-private static class No {
+protected static class No {
     int valor;
+    int tempo;
     No prox;
 
-    No(int valor){this.valor = valor;}
+    No(int valor, int tempo){
+        this.valor = valor;
+        this.tempo=tempo;
+    }
 }
 
 
-    private No inicio;
-    private No fim;
-    private int tamanho;
+    protected No inicio;
+    protected No fim;
+    protected int tamanho;
 
-    public void enfileirar(int valor){
+    public void enfileirar(int valor, int tempo){
 
-        No novo = new No(valor);
+        No novo = new No(valor, tempo);
 
 
     if(isEmpty()){
@@ -69,7 +73,7 @@ private static class No {
         No atual = inicio;
 
         while (atual != null) {
-            System.out.print(atual.valor + " ");
+            System.out.print(atual.valor + " (tempo: " + atual.tempo + ") " +" ");
             atual = atual.prox;
         }
 
