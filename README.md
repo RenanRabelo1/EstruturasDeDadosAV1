@@ -70,6 +70,7 @@ Alternativa (Windows):
 
 bash
 javac -d out src\estruturas\lista\*.java src\estruturas\pilha\*.java src\estruturas\fila\*.java src\aplicacoes\*.java
+
 🚀 Execução
 Após compilar, execute as classes utilizando o caminho completo do pacote.
 
@@ -84,25 +85,35 @@ java -cp out estruturas.pilha.PilhaDinamica
 
 # Fila dinâmica
 java -cp out estruturas.fila.FilaDinamica
+
 2. Executar aplicações completas
 a) Simulação de Atendimento Bancário
+
 bash
+
 java -cp out estruturas.fila.SimulacaoAtendimento
 A simulação mostra minuto a minuto a chegada de clientes (50% de chance por minuto) e o atendimento, calculando o tempo de espera.
 
 b) Escalonador de Processos
+
 bash
+
 java -cp out estruturas.fila.EscalonadorDeProcessos
 Processos com prioridade (valor maior = maior prioridade) são atendidos fora da ordem FIFO.
 
 c) Gerenciador de Histórico (navegação)
+
 bash
+
 java -cp out estruturas.pilha.GerenciadorHistorico
 Simula os botões “voltar” e “avançar” de um navegador, utilizando duas pilhas.
 
 d) Manipulação de Listas
+
 bash
+
 java -cp out estruturas.lista.ManipulacaoDeListas
+
 Demonstra operações de inserção, remoção, inversão e soma em uma lista estática.
 
 🧠 Observações
