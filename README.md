@@ -1,84 +1,126 @@
-# 📚 Sistema de Estruturas de Dados em Java (AV1 - Unifor)
 
-## 📌 Descrição
-Este projeto implementa diversas estruturas de dados fundamentais em Java, sem o uso de bibliotecas prontas (`java.util.*`), com o objetivo de demonstrar seu funcionamento interno e aplicações práticas. O projeto integra conceitos de alocação de memória, recursividade e encapsulamento, além de simular cenários reais como histórico de navegação, filas de banco e escalonamento de processos.
+# Estruturas de Dados – Implementações em Java
 
-## 🧠 Estruturas de Dados Implementadas
+Este projeto contém implementações de diversas estruturas de dados lineares (listas, filas, pilhas) e aplicações de simulação (escalonador de processos, histórico de navegação, simulação de atendimento bancário). O código foi desenvolvido como parte da disciplina de Estruturas de Dados.
 
-### 🔹 Pilhas (Stacks)
-* **PilhaEstatica**: Implementação baseada em vetores com tamanho fixo.
-* **PilhaDinamica**: Implementação utilizando encadeamento de nós (alocação dinâmica).
+## 📁 Estrutura do Projeto
 
-**Funcionalidades:**
-* `push` (inserção no topo)
-* `pop` (remoção do topo)
-* `peek` (consulta do elemento no topo)
-* `busca` (localização de elementos)
-* `liberar` (limpeza de memória)
+├── .idea/ # Arquivos de configuração do IntelliJ IDEA
 
-### 🔹 Filas (Queues)
-* **FilaEstatica**: Implementação circular em vetor para otimização de espaço.
-* **FilaDinamica**: Implementação encadeada com suporte a tempo de atendimento.
-* **Funcionalidades**: Inserção, remoção, consulta de frente, busca e impressão.
+├── src/
 
-### 🔹 Listas
-* **Lista Estática**: Inserção, remoção e busca em vetor.
-* **Lista Simplesmente Encadeada**: Versões ordenada e não ordenada.
-* **Lista Duplamente Encadeada**: Versões ordenada e não ordenada com ponteiros para anterior e próximo.
+│ ├── aplicacoes/
 
-## 🚀 Simulações Implementadas
+│ │ └── MainHistorico.java # Teste do gerenciador de histórico
 
-### 🌐 Gerenciador de Histórico de Navegador
-* **Arquivo**: `GerenciadorHistorico.java`
-* Simula as funções "Voltar" e "Avançar" de um navegador web utilizando duas pilhas dinâmicas para garantir eficiência $O(1)$.
+│ ├── interfaces/
 
-### 🏥 Simulação de Atendimento (Fila de Banco)
-* **Arquivo**: `SimulacaoAtendimento.java`
-* Simula a chegada aleatória de clientes e tempos de atendimento variáveis, calculando o tempo de espera através de uma `FilaDinamica`.
+│ │ └── IPilha.java # Interface genérica para pilhas
 
-### ⚙️ Escalonador de Processos
-* **Arquivo**: `EscalonadorDeProcessos.java`
-* Gerencia a execução de processos com base em prioridades e tempo de execução utilizando uma fila de prioridade.
+│ ├── pilha/
 
-### 🗼 Torre de Hanói (Recursividade)
-* **Arquivo**: `Hanoi.java`
-* Resolução matemática do quebra-cabeça clássico utilizando recursão pura para demonstrar a complexidade exponencial $O(2^n)$.
+│ │ ├── GerenciadorHistorico.java
 
-## ⚙️ Como executar o projeto
+│ │ ├── No.java
 
-### 🔧 Pré-requisitos
-* **Java JDK 8** ou superior instalado.
-* Terminal (PowerShell, CMD ou Terminal do VS Code).
+│ │ ├── PilhaDinamica.java
 
-### ▶️ Passo a passo
-1.  Abra o terminal na pasta `src` do projeto.
-2.  Compile todos os arquivos:
-    ```bash
-    javac *.java
-    ```
-3.  Execute a aplicação desejada:
-    ```bash
-    java GerenciadorHistorico
-    ```
+│ │ └── PilhaEstatica.java
 
-## 🗂️ Estrutura do projeto
-O projeto está organizado nos seguintes arquivos principais:
-* `PilhaEstatica.java` / `PilhaDinamica.java`
-* `FilaEstatica.java` / `FilaDinamica.java`
-* `ListaEstatica.java` / `ListaSimplesmenteEncadeadaOrdenada.java` (e demais variações)
-* `GerenciadorHistorico.java`
-* `SimulacaoAtendimento.java`
-* `Hanoi.java`
-* `EscalonadorDeProcessos.java`
+│ ├── EscalonadorDeProcessos.java
 
-## 🧠 Conceitos Aplicados
-* **LIFO (Last-In, First-Out)**: Para pilhas e histórico.
-* **FIFO (First-In, First-Out)**: Para filas de atendimento.
-* **Encapsulamento**: Atributos privados e métodos de acesso controlados.
-* **Alocação Dinâmica**: Manipulação de nós e referências na memória RAM.
+│ ├── FilaDinamica.java
 
-## 👨‍💻 Autores (Grupo)
-* **Anderson Herculano** (Pilha e Histórico)
-* **Renan Rabelo** (Fila e Atendimento)
-* **Zíltom Machado** (Listas e Escalonador)
-* **Caíque** (Recursão de Listas)
+│ ├── FilaEstatica.java
+
+│ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
+
+│ ├── ListaDuplamenteEncadeadaOrdenada.java
+
+│ ├── ListaEstatica.java
+
+│ ├── ListaSimplesmenteEncadeadaDesordenada.java
+
+│ ├── ListaSimplesmenteEncadeadaOrdenada.java
+
+│ ├── ManipulacaoDeListas.java
+
+│ └── SimulacaoAtendimento.java
+
+└── out/ # Diretório de saída para os .class (gerado após compilação)
+
+
+## 🔧 Pré‑requisitos
+
+- **Java Development Kit (JDK)** – versão 24 ou superior (recomendado)
+- Terminal / Prompt de comando
+
+> **Nota**: O código usa recursos do Java 24 (como `String` templates), mas é compatível com versões a partir do Java 21. Caso utilize uma versão inferior, algumas funcionalidades podem não estar disponíveis.
+
+## ⚙️ Compilação
+
+A partir da raiz do projeto (diretório `EstruturasDeDadosAV1/`), execute:
+
+```bash
+javac -d out src/**/*.java
+```
+
+Isso compilará todos os arquivos `.java` e colocará os arquivos `.class` no diretório `out/`.
+
+## 🚀 Execução
+
+Cada classe com método `main` pode ser executada separadamente. A tabela abaixo mostra o comando para rodar cada aplicação.
+
+| Classe / Aplicação | Comando (a partir da raiz) |
+|--------------------|----------------------------|
+| Simulação de Atendimento | `java -cp out SimulacaoAtendimento` |
+| Escalonador de Processos | `java -cp out EscalonadorDeProcessos` |
+| Manipulação de Listas (teste) | `java -cp out ManipulacaoDeListas` |
+| Histórico de Navegação | `java -cp out aplicacoes.MainHistorico` |
+| Testes individuais das estruturas (ex.: FilaDinamica) | `java -cp out FilaDinamica` |
+
+### 🔁 Exemplo de execução – Simulação de Atendimento
+
+```bash
+java -cp out SimulacaoAtendimento
+```
+
+A simulação exibe minuto a minuto a chegada de clientes, o tempo de espera e o atendimento.
+
+### 🌐 Exemplo – Histórico de Navegação
+
+```bash
+java -cp out aplicacoes.MainHistorico
+```
+
+Demonstra navegação entre páginas, botões “voltar” e “avançar” utilizando duas pilhas dinâmicas.
+
+## 📚 Funcionalidades das Estruturas
+
+### 📦 Listas
+- **ListaEstatica** – array com capacidade fixa, operações de inserção, remoção, busca, inversão, soma.
+- **ListaSimplesmenteEncadeadaDesordenada** – inserção no início, remoção por valor.
+- **ListaSimplesmenteEncadeadaOrdenada** – inserção mantendo a ordem crescente.
+- **ListaDuplamenteEncadeadaNaoOrdenada** – inserção no final, remoção por valor, percurso reverso.
+- **ListaDuplamenteEncadeadaOrdenada** – inserção ordenada, remoção, percurso reverso.
+
+### 🧵 Filas
+- **FilaEstatica** – implementação circular com array.
+- **FilaDinamica** – encadeada com nós, suporte a dois construtores (`int valor` e `int valor, int tempo`).
+
+### 📚 Pilhas
+- **PilhaEstatica** – genérica, baseada em array.
+- **PilhaDinamica** – genérica, encadeada.
+
+### 🧠 Aplicações
+- **Escalonador de Processos** – simula uma fila de processos com prioridade (maior valor de prioridade é atendido primeiro).
+- **Gerenciador de Histórico** – controle de navegação com duas pilhas.
+- **Simulação de Atendimento Bancário** – fila de clientes com tempos aleatórios de chegada e atendimento.
+
+## ✅ Observações
+
+- O código está organizado nos pacotes `aplicacoes`, `interfaces` e `pilha`. Os demos de filas e listas estão no pacote padrão (raiz de `src`).
+- As estruturas de dados estão prontas para uso e podem ser integradas a outras aplicações.
+- Em caso de dúvidas sobre a execução, verifique se o JDK está corretamente instalado e se a compilação foi bem‑sucedida (sem erros).
+
+---
