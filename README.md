@@ -7,7 +7,7 @@ Este projeto contém implementações de diversas estruturas de dados lineares (
 
 ```
 EstruturasDeDadosAV1/
-├── .idea/                      # Arquivos de configuração do IntelliJ IDEA
+├── .idea/                         # Arquivos de configuração do IntelliJ IDEA
 ├── src/
 │   ├── aplicacoes/
 │   │   └── MainHistorico.java     # Teste do gerenciador de histórico
@@ -29,7 +29,7 @@ EstruturasDeDadosAV1/
 │   ├── ManipulacaoDeListas.java
 │   └── SimulacaoAtendimento.java
 └── out/                        # Diretório de saída para os .class (gerado após compilação)
-```
+
 
 ## 🔧 Pré‑requisitos
 
