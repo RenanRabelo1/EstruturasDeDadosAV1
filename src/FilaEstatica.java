@@ -81,5 +81,43 @@ public class FilaEstatica {
     }
 
 
+    public static void main(String[] args) {
+        // Criamos uma fila com capacidade para 5 elementos
+        FilaEstatica fila = new FilaEstatica(5);
 
+        System.out.println("--- Testando Inserção ---");
+        fila.EntrarNaFila(10);
+        fila.EntrarNaFila(20);
+        fila.EntrarNaFila(30);
+        fila.EntrarNaFila(40);
+        fila.EntrarNaFila(50);
+
+        System.out.println("Fila cheia? Tente inserir o 60:");
+        fila.EntrarNaFila(60); // Deve imprimir "Fila está cheia"
+
+        System.out.println("\n--- Estado Atual da Fila ---");
+        fila.ListaInteira();
+        System.out.println("Tamanho atual: " + fila.Tamanho());
+        System.out.println("Primeiro da fila (peek): " + fila.peek());
+        System.out.println("Último da fila: " + fila.Ultimo());
+
+        System.out.println("\n--- Testando Remoção e Circularidade ---");
+        System.out.println("Removido: " + fila.SairDaFila()); // Remove o 10
+        System.out.println("Removido: " + fila.SairDaFila()); // Remove o 20
+
+        System.out.println("Fila após remover dois:");
+        fila.ListaInteira();
+
+        System.out.println("Inserindo 70 e 80 (vão para o 'início' do array via %):");
+        fila.EntrarNaFila(70);
+        fila.EntrarNaFila(80);
+        fila.ListaInteira();
+
+        System.out.println("\n--- Testando Busca ---");
+        int procurar = 40;
+        System.out.println("O valor " + procurar + " está na fila? " + (fila.buscar(procurar) ? "Sim" : "Não"));
+
+        procurar = 100;
+        System.out.println("O valor " + procurar + " está na fila? " + (fila.buscar(procurar) ? "Sim" : "Não"));
+    }
 }
