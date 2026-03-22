@@ -225,5 +225,3 @@ O projeto atingiu os objetivos propostos: implementação de uma biblioteca comp
 - Material didático da disciplina – Prof. Caio Marques.
 
 ---
-
-## 📁 Organização do Código
