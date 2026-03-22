@@ -85,8 +85,8 @@ public class PilhaEstatica<T> { // Não seria melhor fazer um inteiro?
 
     public static void main(String[] args) {
         System.out.println("--- Testando Pilha Estática ---");
-        // Criamos uma caixa que cabe 5 brinquedos
-        PilhaEstatica<Integer> p = new PilhaEstatica<>(5);
+        // Criamos uma caixa que cabe 10 brinquedos
+        PilhaEstatica<Integer> p = new PilhaEstatica<>(10);
 
         System.out.println("Colocando os brinquedos 10, 20 e 30...");
         p.push(10);
