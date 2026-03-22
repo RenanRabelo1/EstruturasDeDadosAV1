@@ -9,43 +9,13 @@ src/
 │ ├── ListaEstatica.java
 │ ├── ListaSimplesmenteEncadeadaDesordenada.java
 │ ├── ListaSimplesmenteEncadeadaOrdenada.java
-│ │ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
-│ │ ├── ListaDuplamenteEncadeadaOrdenada.java
-│ │ └── ManipulacaoDeListas.java
+│ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
+│ ├── ListaDuplamenteEncadeadaOrdenada.java
+│ │── ManipulacaoDeListas.java
 │ │
 │ ├── PilhaEstatica.java
 │ ├── PilhaDinamica.java
-│ │ └── GerenciadorHistorico.java
-│ │
-│ ├── FilaEstatica.java
-│ ├── FilaDinamica.java
-│ ├── EscalonadorDeProcessos.java
-│ └── SimulacaoAtendimento.java
-```
-
-Aqui está o seu arquivo README ajustado e formatado com marcação Markdown para ficar com uma apresentação excelente no seu repositório. Atualizei a estrutura de pastas exatamente como você pediu, mantendo o restante do seu texto intacto, apenas organizando-o visualmente com tabelas, blocos de código e listas.
-
-***
-
-```markdown
-# Estruturas de Dados – Implementações em Java
-
-Este projeto contém implementações de diversas estruturas de dados lineares (listas, filas, pilhas) e aplicações de simulação (escalonador de processos, histórico de navegação, simulação de atendimento bancário). O código foi desenvolvido como parte da disciplina de Estruturas de Dados.
-
-## 📁 Estrutura do Projeto
-
-```text
-src/
-│ ├── ListaEstatica.java
-│ ├── ListaSimplesmenteEncadeadaDesordenada.java
-│ ├── ListaSimplesmenteEncadeadaOrdenada.java
-│ │ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
-│ │ ├── ListaDuplamenteEncadeadaOrdenada.java
-│ │ └── ManipulacaoDeListas.java
-│ │
-│ ├── PilhaEstatica.java
-│ ├── PilhaDinamica.java
-│ │ └── GerenciadorHistorico.java
+│ │── GerenciadorHistorico.java
 │ │
 │ ├── FilaEstatica.java
 │ ├── FilaDinamica.java
