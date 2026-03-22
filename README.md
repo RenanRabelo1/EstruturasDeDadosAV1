@@ -34,12 +34,19 @@ Este projeto contém implementações de diversas estruturas de dados lineares (
 │ ├── FilaEstatica.java
 
 │ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
+
 │ ├── ListaDuplamenteEncadeadaOrdenada.java
+
 │ ├── ListaEstatica.java
+
 │ ├── ListaSimplesmenteEncadeadaDesordenada.java
+
 │ ├── ListaSimplesmenteEncadeadaOrdenada.java
+
 │ ├── ManipulacaoDeListas.java
+
 │ └── SimulacaoAtendimento.java
+
 └── out/ # Diretório de saída para os .class (gerado após compilação)
 
 
