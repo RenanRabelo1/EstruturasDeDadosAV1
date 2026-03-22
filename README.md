@@ -100,7 +100,3 @@ java -cp out aplicacoes.MainHistorico
 * Em caso de dúvidas sobre a execução, verifique se o JDK está corretamente instalado e se a compilação foi bem‑sucedida (sem erros).
 ```
 
-
-
-
-
