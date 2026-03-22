@@ -133,9 +133,9 @@ O trabalho está organizado nos seguintes módulos:
 - Remove e executa o processo, depois imprime a fila restante.
 - Se fosse utilizado uma fila de prioridade mais eficiente (heap), a complexidade cairia para **O(log n)**.
 
-### 4. Manipulação Recursiva de Listas (Projetada, mas não totalmente implementada no código fornecido)
+### 4. Manipulação Recursiva de Listas
 - O trabalho exige funções recursivas para contar elementos, inverter lista, buscar elemento e calcular soma.
-- No código entregue, a lista estática (`ListaEstatica`) contém métodos iterativos (`somar()`, `inverter()`).  
+- No código entregue, a lista estática (`ListaEstatica`) e (`ManipulaçãoDeListas`) contém métodos iterativos (`somar()`, `inverter()`).  
 - **Sugestão de implementação recursiva** (exemplo para lista estática):
   - `int contar(int[] arr, int pos)`: retorna 1 + contar(arr, pos+1) se pos < tamanho.
   - `int soma(int[] arr, int pos)`: similar.
