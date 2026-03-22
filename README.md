@@ -1,34 +1,32 @@
-```markdown
+
 # Estruturas de Dados – Implementações em Java
 
 Este projeto contém implementações de diversas estruturas de dados lineares (listas, filas, pilhas) e aplicações de simulação (escalonador de processos, histórico de navegação, simulação de atendimento bancário). O código foi desenvolvido como parte da disciplina de Estruturas de Dados.
 
 ## 📁 Estrutura do Projeto
 
-```
-EstruturasDeDadosAV1/
-├── .idea/                         # Arquivos de configuração do IntelliJ IDEA
+├── .idea/ # Arquivos de configuração do IntelliJ IDEA
 ├── src/
-│   ├── aplicacoes/
-│   │   └── MainHistorico.java     # Teste do gerenciador de histórico
-│   ├── interfaces/
-│   │   └── IPilha.java            # Interface genérica para pilhas
-│   ├── pilha/
-│   │   ├── GerenciadorHistorico.java
-│   │   ├── No.java
-│   │   ├── PilhaDinamica.java
-│   │   └── PilhaEstatica.java
-│   ├── EscalonadorDeProcessos.java
-│   ├── FilaDinamica.java
-│   ├── FilaEstatica.java
-│   ├── ListaDuplamenteEncadeadaNaoOrdenada.java
-│   ├── ListaDuplamenteEncadeadaOrdenada.java
-│   ├── ListaEstatica.java
-│   ├── ListaSimplesmenteEncadeadaDesordenada.java
-│   ├── ListaSimplesmenteEncadeadaOrdenada.java
-│   ├── ManipulacaoDeListas.java
-│   └── SimulacaoAtendimento.java
-└── out/                        # Diretório de saída para os .class (gerado após compilação)
+│ ├── aplicacoes/
+│ │ └── MainHistorico.java # Teste do gerenciador de histórico
+│ ├── interfaces/
+│ │ └── IPilha.java # Interface genérica para pilhas
+│ ├── pilha/
+│ │ ├── GerenciadorHistorico.java
+│ │ ├── No.java
+│ │ ├── PilhaDinamica.java
+│ │ └── PilhaEstatica.java
+│ ├── EscalonadorDeProcessos.java
+│ ├── FilaDinamica.java
+│ ├── FilaEstatica.java
+│ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
+│ ├── ListaDuplamenteEncadeadaOrdenada.java
+│ ├── ListaEstatica.java
+│ ├── ListaSimplesmenteEncadeadaDesordenada.java
+│ ├── ListaSimplesmenteEncadeadaOrdenada.java
+│ ├── ManipulacaoDeListas.java
+│ └── SimulacaoAtendimento.java
+└── out/ # Diretório de saída para os .class (gerado após compilação)
 
 
 ## 🔧 Pré‑requisitos
