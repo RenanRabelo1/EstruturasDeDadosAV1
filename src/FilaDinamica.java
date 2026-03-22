@@ -1,15 +1,18 @@
 public class FilaDinamica {
 
-protected static class No {
-    int valor;
-    int tempo;
-    No prox;
+    protected static class No {
+        int valor;
+        int tempo;
+        No prox;
 
-    No(int valor, int tempo){
-        this.valor = valor;
-        this.tempo=tempo;
+        No(int valor, int tempo){
+            this.valor = valor;
+            this.tempo=tempo;
+        }
+        No(int valor){
+            this.valor = valor;
+        }
     }
-}
 
 
     protected No inicio;
@@ -21,15 +24,32 @@ protected static class No {
         No novo = new No(valor, tempo);
 
 
-    if(isEmpty()){
-        inicio = novo;
-    } else{
-        fim.prox = novo;
+        if(isEmpty()){
+            inicio = novo;
+        } else{
+            fim.prox = novo;
+        }
+
+        fim = novo;
+
+        tamanho++;
+
     }
+    
+    public void enfileirar(int valor){
 
-    fim = novo;
+        No novo = new No(valor);
 
-    tamanho++;
+
+        if(isEmpty()){
+            inicio = novo;
+        } else{
+            fim.prox = novo;
+        }
+
+        fim = novo;
+
+        tamanho++;
 
     }
 
@@ -45,7 +65,7 @@ protected static class No {
         inicio = inicio.prox;
 
         if(inicio == null){
-        fim = null;
+            fim = null;
         }
         tamanho--;
 
@@ -87,7 +107,7 @@ protected static class No {
         while (atual != null) {
 
             if (atual.valor == valorDesejado) {
-                
+
                 return true;
             }
             atual = atual.prox;
@@ -132,6 +152,4 @@ protected static class No {
 
 
 
-    }
-
-
+}
