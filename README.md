@@ -6,19 +6,33 @@ Este projeto contém implementações de diversas estruturas de dados lineares (
 ## 📁 Estrutura do Projeto
 
 ├── .idea/ # Arquivos de configuração do IntelliJ IDEA
+
 ├── src/
+
 │ ├── aplicacoes/
+
 │ │ └── MainHistorico.java # Teste do gerenciador de histórico
+
 │ ├── interfaces/
+
 │ │ └── IPilha.java # Interface genérica para pilhas
+
 │ ├── pilha/
+
 │ │ ├── GerenciadorHistorico.java
+
 │ │ ├── No.java
+
 │ │ ├── PilhaDinamica.java
+
 │ │ └── PilhaEstatica.java
+
 │ ├── EscalonadorDeProcessos.java
+
 │ ├── FilaDinamica.java
+
 │ ├── FilaEstatica.java
+
 │ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
 │ ├── ListaDuplamenteEncadeadaOrdenada.java
 │ ├── ListaEstatica.java
