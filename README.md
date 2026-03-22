@@ -1,2 +1,186 @@
-# EstruturasDeDadosAV1
-Projeto realizado na disciplina de estrutura de dados, filas de prioridade, filas dinâmicas, filas estáticas e etc.
+# RELATÓRIO – ESTRUTURA DE DADOS
+
+## Lista Estática e Manipulação de Listas
+
+**Autor:** Caique Mendonça
+
+---
+
+## (a) Introdução
+
+As estruturas de dados são fundamentais na área da computação, pois permitem organizar, armazenar e manipular informações de forma eficiente. Entre essas estruturas, as listas lineares se destacam por sua simplicidade e ampla aplicação em diversos problemas computacionais.
+
+Neste trabalho, foi implementada uma **lista estática**, baseada em vetor, além de uma aplicação prática para **manipulação de listas**, utilizando exclusivamente estruturas desenvolvidas manualmente, sem o uso de bibliotecas prontas da linguagem. O objetivo é compreender o funcionamento interno dessas estruturas, bem como analisar suas limitações e vantagens.
+
+---
+
+## (b) Projeto dos Tipos Abstratos de Dados (TADs)
+
+A estrutura implementada foi uma **Lista Estática**, definida como um conjunto de elementos armazenados sequencialmente em memória, com tamanho fixo.
+
+### Características principais:
+
+* Armazenamento em vetor (`int[] dados`);
+* Controle de elementos através da variável `tamanho`;
+* Capacidade máxima definida na criação da lista.
+
+### Operações definidas:
+
+* Inserção de elementos;
+* Remoção de elementos;
+* Busca;
+* Verificação de lista vazia ou cheia;
+* Impressão;
+* Liberação de memória (esvaziar);
+* Operações adicionais: inverter e somar elementos.
+
+A escolha por vetor foi feita por sua simplicidade e eficiência no acesso direto aos elementos.
+
+---
+
+## (c) Implementação
+
+A implementação foi realizada em Java, utilizando a classe `ListaEstatica`.
+
+### Estrutura interna:
+
+* `int[] dados`: armazena os elementos;
+* `int tamanho`: controla quantos elementos estão na lista.
+
+### Principais métodos:
+
+#### Inserção
+
+Adiciona elementos no final da lista, caso haja espaço disponível.
+
+#### Remoção
+
+Busca o elemento e, ao encontrá-lo, desloca os elementos subsequentes para a esquerda.
+
+#### Busca
+
+Percorre a lista sequencialmente até encontrar o valor.
+
+#### Impressão
+
+Exibe todos os elementos da lista.
+
+#### Verificações
+
+* `isEmpty()`: verifica se a lista está vazia;
+* `isFull()`: verifica se a lista está cheia.
+
+#### Operações adicionais
+
+* `inverter()`: troca os elementos de posição;
+* `somar()`: retorna a soma dos elementos;
+* `esvaziar()`: limpa a lista.
+
+---
+
+## (d) Uso de Técnicas de Programação
+
+### Recursividade
+
+Nesta implementação específica, não foi utilizada recursividade. As operações foram feitas de forma iterativa, por serem mais simples e eficientes nesse contexto.
+
+### Referências e Alias
+
+O vetor utilizado representa uma referência direta à estrutura de dados. Alterações feitas no vetor refletem diretamente na lista.
+
+### Alocação de Memória
+
+Foi utilizada **alocação estática**, pois o tamanho do vetor é definido no momento da criação da lista e não pode ser alterado posteriormente.
+
+### Encapsulamento
+
+Os atributos da classe são privados, garantindo segurança e controle de acesso através dos métodos públicos.
+
+---
+
+## (e) Análise de Complexidade
+
+### Inserção
+
+* Complexidade: **O(1)**
+* Inserção no final do vetor.
+
+### Remoção
+
+* Complexidade: **O(n)**
+* Necessita percorrer a lista e deslocar elementos.
+
+### Busca
+
+* Complexidade: **O(n)**
+* Busca sequencial.
+
+### Impressão
+
+* Complexidade: **O(n)**
+
+### Inversão
+
+* Complexidade: **O(n)**
+
+### Soma
+
+* Complexidade: **O(n)**
+
+### Consumo de Memória
+
+* Fixo, definido pela capacidade do vetor.
+
+---
+
+## (f) Testes Executados
+
+Foi criada uma classe `ManipulacaoDeListas` para testar as operações.
+
+### Operações testadas:
+
+* Inserção de elementos (10, 20, 30, 40);
+* Remoção de elemento (20);
+* Busca de elementos existentes e inexistentes;
+* Verificação de lista cheia e vazia;
+* Inversão da lista;
+* Soma dos elementos;
+* Liberação de memória.
+
+### Resultados observados:
+
+* A inserção funcionou corretamente até o limite da lista;
+* A remoção reorganizou corretamente os elementos;
+* A busca retornou resultados coerentes;
+* A inversão modificou corretamente a ordem dos elementos;
+* A soma retornou o valor esperado;
+* Após esvaziar, a lista voltou ao estado inicial.
+
+### Análise crítica:
+
+A lista estática apresentou boa performance para operações simples, porém possui limitações importantes:
+
+* Tamanho fixo;
+* Alto custo em remoções e inserções intermediárias;
+* Necessidade de deslocamento de elementos.
+
+---
+
+## (g) Conclusão
+
+A implementação da lista estática permitiu compreender de forma prática como estruturas lineares funcionam internamente. Foi possível observar que, apesar de eficiente em acesso direto, essa estrutura apresenta limitações relacionadas à flexibilidade e custo de operações.
+
+Durante o desenvolvimento, foi possível reforçar conceitos importantes como manipulação de memória, controle de estruturas e análise de complexidade.
+
+Como aprendizado principal, destaca-se a importância de escolher a estrutura de dados adequada para cada problema, considerando desempenho e limitações.
+
+---
+
+## (h) Bibliografia
+
+* CORMEN, Thomas H. et al. *Algoritmos: Teoria e Prática*.
+* GOODRICH, Michael; TAMASSIA, Roberto. *Estruturas de Dados e Algoritmos em Java*.
+* Material de aula – Estrutura de Dados – Universidade de Fortaleza (Unifor).
+
+---
+
