@@ -1,5 +1,3 @@
-package pilha;
-
 public class GerenciadorHistorico {
     private final PilhaDinamica<String> pilhaVoltar; //Pilha para ficar salvando quando for para voltar
     private final PilhaDinamica<String> pilhaAvancar; //Pilha para ficar salvando quando for para Avançar

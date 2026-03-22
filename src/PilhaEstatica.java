@@ -1,5 +1,3 @@
-package pilha;
-
 public class PilhaEstatica<T> { // Não seria melhor fazer um inteiro?
     // Explicação: Usamos <T> para a caixa aceitar qualquer coisa (carrinho, boneca, números). Se fosse só int, só caberia números.
     private final T[] elementos; // T é de Type, que define um Tipo Abstrato de Dados TADs

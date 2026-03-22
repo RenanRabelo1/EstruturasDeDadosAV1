@@ -1,5 +1,3 @@
-package pilha;
-
 public class PilhaDinamica<T> {
 
     protected static class No<T> { // O Nó é como cada elo da corrente.
