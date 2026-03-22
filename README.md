@@ -8,24 +8,45 @@ Este projeto contém implementações de estruturas de dados lineares (listas, p
 Os arquivos foram organizados nos seguintes pacotes:
 src/
 ├── estruturas/
+
 │ ├── lista/
+
 │ │ ├── ListaEstatica.java
+
 │ │ ├── ListaSimplesmenteEncadeadaDesordenada.java
+
 │ │ ├── ListaSimplesmenteEncadeadaOrdenada.java
+
 │ │ ├── ListaDuplamenteEncadeadaNaoOrdenada.java
+
 │ │ ├── ListaDuplamenteEncadeadaOrdenada.java
+
 │ │ └── ManipulacaoDeListas.java
+
+
 │ ├── pilha/
+
 │ │ ├── PilhaEstatica.java
+
 │ │ ├── PilhaDinamica.java
+
 │ │ └── GerenciadorHistorico.java
+
+
 │ └── fila/
+
 │ ├── FilaEstatica.java
+
 │ ├── FilaDinamica.java
+
 │ ├── EscalonadorDeProcessos.java
+
 │ └── SimulacaoAtendimento.java
+
+
 └── aplicacoes/
-└── Main.java (opcional – pode conter um menu centralizado)
+
+└── Main.java
 
 text
 
